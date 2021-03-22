@@ -13,6 +13,9 @@
 // https://on.cypress.io/configuration
 // ***********************************************************
 
+//Adds XPath command to Cypress.io test runner
+require('cypress-xpath')
+
 // Import commands.js using ES2015 syntax:
 import './commands'
 
