@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-describe("Verifyinh variables, cypress commands and jquery commands", () => {
+describe("Verifying variables, cypress commands and jquery commands", () => {
     it("Navigating to specific product pages", ()=>{
 
         cy.visit("https://automationteststore.com/");
