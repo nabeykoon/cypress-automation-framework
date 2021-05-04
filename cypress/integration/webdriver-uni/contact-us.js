@@ -3,10 +3,11 @@
 describe("Test contact Us form via WebDriverUniversity", () => {
     it("Should be able to submit a successful submission via Contact Us form", ()=>{
         
-        //cy.visit("http://www.webdriveruniversity.com/");
-        //cy.get("#contact-us").click();
+        cy.visit("http://www.webdriveruniversity.com/");
+        // invoke jQuery method 'removeAttr' to remove attribute "target="_blank" which triggered the new tab opening after click on the link
+        cy.get("#contact-us").invoke("removeAttr", "target").click();
         // older cypress version Ex: 4.5.0, you should use click with argument click({force: true}) since this element dimension is 0X0 pixels and it is not visible.
-        cy.visit("http://www.webdriveruniversity.com/Contact-Us/contactus.html");
+        //cy.visit("http://www.webdriveruniversity.com/Contact-Us/contactus.html");
         cy.document().should('have.property', 'charset').and('eq', 'UTF-8');
         cy.title().should('include', 'WebDriver | Contact Us');
         cy.url().should('include', 'contactus');
