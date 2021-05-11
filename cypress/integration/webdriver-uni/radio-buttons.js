@@ -23,11 +23,6 @@ describe("Verify Radio buttons via Webdriver uni", () => {
         cy.get("input[value = 'lettuce']").click().should("be.checked");
         cy.get("input[value = 'pumpkin']").should("not.be.checked");
 
-        cy.get("input[value = 'cabbage']").should("be.disabled");
-
-        
-        
-
-        
+        cy.get("input[value = 'cabbage']").should("be.disabled");   
     })
 })
