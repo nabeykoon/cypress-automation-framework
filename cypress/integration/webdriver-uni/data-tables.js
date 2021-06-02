@@ -25,7 +25,7 @@ describe("Handling data via webdriver uni", () => {
     it.only("Assert the age of a given user based on last name", () => {
         cy.get("#thumbnail-1 tr td:nth-child(2)").each(($el, index, $list) => {
             const lastName = $el.text();
-            if(lastName.includes("Woods")){
+            if (lastName.includes("Woods")) {
                 cy.get("#thumbnail-1 tr td:nth-child(2)").eq(index).next().then(($age) => {
                     const userAge = $age.text();
                     expect(userAge).to.equal("80");
