@@ -23,8 +23,6 @@ describe("Test via webdriver uni", () => {
         var futureMonth = date.toLocaleString("default", { month: "long" });
         var futureDay = date.getDate();
 
-        cy.log(futureDay);
-
         cy.get("#datepicker").click();
 
         function selectMonthAndYear() {
@@ -39,18 +37,17 @@ describe("Test via webdriver uni", () => {
                         cy.get(".next").first().click();
                         selectMonthAndYear();
                     }
-                }) 
+                })
             })
         }
 
-        function selectFutureDay(){
+        function selectFutureDay() {
             cy.get("[class='day']").contains(futureDay).click();
 
         }
 
         selectMonthAndYear();
         selectFutureDay();
-     
-        
+
     });
 });
