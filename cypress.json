@@ -1,3 +1,10 @@
 {
-    "video": false
+    "baseUrl": "http://www.webdriveruniversity.com",
+    "video": false,
+    
+    "env": {
+        "webdriverUni_homepage": "http://www.webdriveruniversity.com",
+        "first_name": "Supipi",
+        "last_name": "Vidanagamage"
+    }
 }

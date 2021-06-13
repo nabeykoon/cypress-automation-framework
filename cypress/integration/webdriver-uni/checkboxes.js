@@ -3,9 +3,7 @@
 describe("Verify Checkboxes via Webdriver uni", () => {
 
     beforeEach(() => {
-        cy.visit("http://www.webdriveruniversity.com/");
-        // invoke jQuery method 'removeAttr' to remove attribute "target="_blank" which triggered the new tab opening after click on the link
-        cy.get("#dropdown-checkboxes-radiobuttons").invoke("removeAttr", "target").click();
+       cy.navigateTo_WebdriverUni_Checkbox_page();
     })
 
     it("check and validate checkbox", ()=>{
