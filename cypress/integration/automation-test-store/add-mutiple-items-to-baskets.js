@@ -24,6 +24,6 @@ describe("Add mutiple items to basket  ", () => {
 
     it("Add specific item to basket", () => {
         automationStoreHaircarePage.addHaircareProductsToBaskets();
-        cy.get(".dropdown-toggle .cart_total").should("have.text", "$46.45").click();
+        cy.get(".dropdown-toggle .cart_total").should("have.text", "$46.45").click().debug();
     });
 })

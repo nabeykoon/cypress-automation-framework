@@ -1,7 +1,9 @@
 class AutomationStoreHaircarePage {
     addHaircareProductsToBaskets() {
         globalThis.data.productName.forEach((name) => {
-            cy.addProductToBasket(name);
+            cy.addProductToBasket(name).then(() => {
+                //debugger
+            })
         })
     }
 }
