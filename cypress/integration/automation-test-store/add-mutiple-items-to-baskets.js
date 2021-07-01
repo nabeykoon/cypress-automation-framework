@@ -18,6 +18,9 @@ describe("Add mutiple items to basket  ", () => {
         //cy.visit("https://automationteststore.com/");
         //cy.get("a[href*='product/category&path=']").contains("Hair Care").click();
 
+        //cy.clearLocalStorage();
+        //cy.clearCookies();
+        // Cypress runs above automatically before each test to prevent state from being shared across tests. Only use this if you want to clear inside a single test.
         automationStoreHomePage.visitHomePage();
         automationStoreHomePage.clickOnHaircareLink();
     })

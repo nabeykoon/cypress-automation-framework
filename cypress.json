@@ -1,11 +1,10 @@
 {
-    "baseUrl": "http://www.webdriveruniversity.com",
-    "video": false,
-    "pageLoadTimeout": 30000,
-    
-    "env": {
-        "webdriverUni_homepage": "http://www.webdriveruniversity.com",
-        "first_name": "Supipi",
-        "last_name": "Vidanagamage"
-    }
+  "baseUrl": "http://www.webdriveruniversity.com",
+  "pageLoadTimeout": 30000,
+  "env": {
+    "webdriverUni_homepage": "http://www.webdriveruniversity.com",
+    "first_name": "Supipi",
+    "last_name": "Vidanagamage"
+  },
+  "projectId": "ej9acw"
 }

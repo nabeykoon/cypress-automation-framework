@@ -5,6 +5,7 @@ class ContactUsPage {
         cy.get('input[name="email"]').type(email);
         cy.get('textarea[name="message"]').type(comment);
         cy.get('input[type="submit"]').click();
+        cy.screenshot("Capture Contact Us form submission");
     }
 }
 export default ContactUsPage;

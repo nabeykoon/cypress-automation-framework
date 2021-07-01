@@ -1,7 +1,7 @@
 /// <reference types="Cypress" />
 
 //Returns error due to two domains accessed within same test.
-describe("Cypress web security", () => {
+describe.skip("Cypress web security", () => {
     it("Validate visiting two different domains", ()=>{
         cy.visit("http://www.webdriveruniversity.com/");
         cy.visit("https://automationteststore.com/");
