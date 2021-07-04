@@ -6,5 +6,9 @@
     "first_name": "Supipi",
     "last_name": "Vidanagamage"
   },
-  "projectId": "ej9acw"
+  "projectId": "ej9acw",
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "configFile": "reporter-config.json"
+  }
 }

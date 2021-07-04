@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-07-04T19:31:58.342Z",
+    "end": "2021-07-04T19:32:07.169Z",
+    "duration": 8827,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a513f193-f77b-44c5-9873-24ecdffb97ef",
+      "title": "",
+      "fullFile": "cypress\\integration\\automation-test-store\\inspect-item.js",
+      "file": "cypress\\integration\\automation-test-store\\inspect-item.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a5b8e311-8221-4bb3-bfc1-5a6ed6cfd451",
+          "title": "Inspect automation test store items using chain of commands",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Click on the first item using item header",
+              "fullTitle": "Inspect automation test store items using chain of commands Click on the first item using item header",
+              "timedOut": null,
+              "duration": 7466,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://automationteststore.com/'); //cy.get('a[title=\"Skinsheen Bronzer Stick\"]').click();\ncy.get('.prdocutname').contains('Skinsheen Bronzer Stick').click().then(function (itemHeaderText) {\n  console.log(\"Selected the following item \" + itemHeaderText.text());\n});",
+              "err": {},
+              "uuid": "024f768d-7df1-49d1-9ef3-cf20ed4e5779",
+              "parentUUID": "a5b8e311-8221-4bb3-bfc1-5a6ed6cfd451",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "024f768d-7df1-49d1-9ef3-cf20ed4e5779"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7466,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

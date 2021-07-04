@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-07-04T19:31:32.225Z",
+    "end": "2021-07-04T19:31:40.686Z",
+    "duration": 8461,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d64a3888-798d-4213-a495-0c84ac8f05c1",
+      "title": "",
+      "fullFile": "cypress\\integration\\automation-test-store\\alias-invoke.js",
+      "file": "cypress\\integration\\automation-test-store\\alias-invoke.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e422bc9c-3ca7-416f-ad5c-59344b1fcdd8",
+          "title": "Alias and invoke",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Calculate total price of normal and sale products",
+              "fullTitle": "Alias and invoke Calculate total price of normal and sale products",
+              "timedOut": null,
+              "duration": 7069,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://automationteststore.com/\");\ncy.get(\".thumbnail\").as(\"productThumbnails\");\n/*         cy.get(\"@productThumbnails\").find(\".oneprice\").each(($el, index, $list) => {\n            cy.log($el.text());\n    }) */\ncy.get(\"@productThumbnails\").find(\".oneprice\").invoke(\"text\").as(\"itemPrice\");\ncy.get(\"@productThumbnails\").find(\".pricenew\").invoke(\"text\").as(\"saleItemPrice\");\nvar allItemsTotal = 0;\ncy.get(\"@itemPrice\").then(function ($linkText) {\n  var itemPrice = $linkText.split(\"$\");\n  var i;\n  var totalNonSaleItemsPrice = 0;\n  for (i = 0; i < itemPrice.length; i++) {\n    cy.log(itemPrice[i]);\n    totalNonSaleItemsPrice += Number(itemPrice[i]);\n  }\n  allItemsTotal += totalNonSaleItemsPrice;\n  cy.log(\"Non sale items total price: \" + totalNonSaleItemsPrice);\n});\ncy.get(\"@saleItemPrice\").then(function ($linkText) {\n  var saleItemPrice = $linkText.split(\"$\");\n  var i;\n  var totalSaleItemsPrice = 0;\n  for (i = 0; i < saleItemPrice.length; i++) {\n    cy.log(saleItemPrice[i]);\n    totalSaleItemsPrice += Number(saleItemPrice[i]);\n  }\n  allItemsTotal += totalSaleItemsPrice;\n  cy.log(\"Sale items total price: \" + totalSaleItemsPrice);\n}).then(function () {\n  cy.log(\"Total price of all items: \" + allItemsTotal);\n  expect(allItemsTotal).to.equal(640.7);\n});",
+              "err": {},
+              "uuid": "a430239b-b35b-4ef6-9f6c-d775790162de",
+              "parentUUID": "e422bc9c-3ca7-416f-ad5c-59344b1fcdd8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a430239b-b35b-4ef6-9f6c-d775790162de"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7069,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

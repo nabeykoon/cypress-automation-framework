@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-07-04T19:32:51.752Z",
+    "end": "2021-07-04T19:33:00.773Z",
+    "duration": 9021,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3b497752-3e4a-4ccb-a5e4-8fc6c808f6ce",
+      "title": "",
+      "fullFile": "cypress\\integration\\webdriver-uni\\browser-navigation.js",
+      "file": "cypress\\integration\\webdriver-uni\\browser-navigation.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "80ab0a72-8b85-4706-adb2-e4d6fc7cbb1f",
+          "title": "Validate webdriver uni homepage links",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Confirm links redirects to the correct pages",
+              "fullTitle": "Validate webdriver uni homepage links Confirm links redirects to the correct pages",
+              "timedOut": null,
+              "duration": 9010,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://www.webdriveruniversity.com/\"); // invoke jQuery method 'removeAttr' to remove attribute \"target=\"_blank\" which triggered the new tab opening after click on the link\ncy.get(\"#contact-us\").invoke(\"removeAttr\", \"target\").click(); // older cypress version Ex: 4.5.0, you should use click with argument click({force: true}) since this element dimension is 0X0 pixels and it is not visible.\ncy.url().should(\"include\", \"contactus\");\ncy.go(\"back\");\ncy.reload(); //Reload without cache\n//cy.reload(true);\ncy.go(\"forward\");\ncy.url().should(\"include\", \"contactus\");\ncy.go(\"back\");\ncy.get(\"#login-portal\").invoke(\"removeAttr\", \"target\").click();\ncy.url().should(\"include\", \"Login-Portal\");\ncy.go(\"back\");\ncy.get(\"#to-do-list\").invoke(\"removeAttr\", \"target\").click();\ncy.url().should(\"include\", \"To-Do-List\");\ncy.go(\"back\");",
+              "err": {},
+              "uuid": "43e59207-21f0-47b4-8463-d9f2a4fa7dbc",
+              "parentUUID": "80ab0a72-8b85-4706-adb2-e4d6fc7cbb1f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "43e59207-21f0-47b4-8463-d9f2a4fa7dbc"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9010,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

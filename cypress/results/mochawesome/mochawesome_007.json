@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 2,
+    "failures": -1,
+    "start": "2021-07-04T19:32:40.153Z",
+    "end": "2021-07-04T19:32:40.166Z",
+    "duration": 13,
+    "testsRegistered": 2,
+    "passPercent": null,
+    "pendingPercent": 100,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 1,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "cdfa8410-d133-4449-89e0-eeff16c252ed",
+      "title": "",
+      "fullFile": "cypress\\integration\\other\\same-origin-policy.js",
+      "file": "cypress\\integration\\other\\same-origin-policy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bdaa38ae-509f-4ea2-8df5-9d29818a1b8c",
+          "title": "Cypress web security",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validate visiting two different domains",
+              "fullTitle": "Cypress web security Validate visiting two different domains",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "57f12af6-8308-4765-885d-d88d8dfb23d4",
+              "parentUUID": "bdaa38ae-509f-4ea2-8df5-9d29818a1b8c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate visiting two different domains via user actions",
+              "fullTitle": "Cypress web security Validate visiting two different domains via user actions",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "4548a70f-df65-4145-8a81-245f13d24ccb",
+              "parentUUID": "bdaa38ae-509f-4ea2-8df5-9d29818a1b8c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [],
+          "pending": [
+            "57f12af6-8308-4765-885d-d88d8dfb23d4",
+            "4548a70f-df65-4145-8a81-245f13d24ccb"
+          ],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

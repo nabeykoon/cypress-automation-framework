@@ -1,0 +1,145 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-07-04T19:32:10.284Z",
+    "end": "2021-07-04T19:32:26.141Z",
+    "duration": 15857,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ab03b9bd-9ca9-4cd7-8e22-f23cfd252cd3",
+      "title": "",
+      "fullFile": "cypress\\integration\\automation-test-store\\iterate-over-element.js",
+      "file": "cypress\\integration\\automation-test-store\\iterate-over-element.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "609c0ba7-1be6-4c0f-bb35-428b0b73580f",
+          "title": "Iterate over elements",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Log information of all haircare products",
+              "fullTitle": "Iterate over elements Log information of all haircare products",
+              "timedOut": null,
+              "duration": 6448,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.fixed_wrapper .prdocutname').each(function ($el, index, $list) {\n  cy.log(\"Index: \" + index + \" : \" + $el.text());\n});",
+              "err": {},
+              "uuid": "4cb00434-6f0e-480e-b95d-e07a52b4fc0f",
+              "parentUUID": "609c0ba7-1be6-4c0f-bb35-428b0b73580f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Add specific product to basket",
+              "fullTitle": "Iterate over elements Add specific product to basket",
+              "timedOut": null,
+              "duration": 2913,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// cy.get('.fixed_wrapper .prdocutname').each(($el, index, $list) => {\n//     if($el.text() === 'Curls to straight Shampoo'){\n//         cy.wrap($el).click();\n//     }\n// })\n//use common method defined in commands.js instead od above code block\ncy.selectProduct(\"Curls to straight Shampoo\");",
+              "err": {},
+              "uuid": "8a448c18-8f01-40e0-bce6-ffc4b4043675",
+              "parentUUID": "609c0ba7-1be6-4c0f-bb35-428b0b73580f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Add another specific product to basket",
+              "fullTitle": "Iterate over elements Add another specific product to basket",
+              "timedOut": null,
+              "duration": 4839,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.selectProduct(\"Eau Parfumee au The Vert Shampoo\");",
+              "err": {},
+              "uuid": "5cdac85d-7d8b-42a5-9f8a-441a2bfad729",
+              "parentUUID": "609c0ba7-1be6-4c0f-bb35-428b0b73580f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4cb00434-6f0e-480e-b95d-e07a52b4fc0f",
+            "8a448c18-8f01-40e0-bce6-ffc4b4043675",
+            "5cdac85d-7d8b-42a5-9f8a-441a2bfad729"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 14200,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

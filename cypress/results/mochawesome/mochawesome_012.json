@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-07-04T19:33:22.066Z",
+    "end": "2021-07-04T19:33:25.285Z",
+    "duration": 3219,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a573a1c6-d573-4ad3-bf3f-53b676ddc88d",
+      "title": "",
+      "fullFile": "cypress\\integration\\webdriver-uni\\data-tables.js",
+      "file": "cypress\\integration\\webdriver-uni\\data-tables.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "66329fba-5962-4fc7-be64-662bcf0753ab",
+          "title": "Handling data via webdriver uni",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Assert the age of a given user based on last name",
+              "fullTitle": "Handling data via webdriver uni Assert the age of a given user based on last name",
+              "timedOut": null,
+              "duration": 3194,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#thumbnail-1 tr td:nth-child(2)\").each(function ($el, index, $list) {\n  var lastName = $el.text();\n  if (lastName.includes(\"Woods\")) {\n    cy.get(\"#thumbnail-1 tr td:nth-child(2)\").eq(index).next().then(function ($age) {\n      var userAge = $age.text();\n      expect(userAge).to.equal(\"80\");\n    });\n  }\n});",
+              "err": {},
+              "uuid": "06629461-df8f-4be4-8fb8-f96eb9dc5320",
+              "parentUUID": "66329fba-5962-4fc7-be64-662bcf0753ab",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "06629461-df8f-4be4-8fb8-f96eb9dc5320"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3194,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
