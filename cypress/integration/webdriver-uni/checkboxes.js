@@ -3,6 +3,7 @@
 describe("Verify Checkboxes via Webdriver uni", () => {
 
     beforeEach(() => {
+        cy.log(Cypress.env("name"));
        cy.navigateTo_WebdriverUni_Checkbox_page();
     })
 
