@@ -6,6 +6,10 @@
     "first_name": "Supipi",
     "last_name": "Vidanagamage"
   },
+  "retries": {
+    "runMode": 1,
+    "openMode": 0
+  },
   "projectId": "ej9acw",
   "reporter": "cypress-multi-reporters",
   "reporterOptions": {
