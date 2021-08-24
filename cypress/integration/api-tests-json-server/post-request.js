@@ -2,14 +2,14 @@
 
 describe("Post Request", () => {
     var titleOfPosts = new Array();
-    let randonTitle = Math.random().toString(36).substring(1) + Math.random().toString(36).substring(1);
+    let randomTitle = Math.random().toString(36).substring(1) + Math.random().toString(36).substring(1);
 
     it("Create a new post via /posts API", () => {
         cy.request({
             method: "POST",
             url: "http://localhost:3000/posts",
             body: {
-                title: randonTitle,
+                title: randomTitle,
                 author: "Supipi"
             }
         }).then(response => {
