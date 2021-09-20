@@ -47,7 +47,7 @@ describe("network requests", () => {
         }, {
             statusCode: 404,
             body: { error: message },
-            delayMs: 500
+            delay: 500
         }).as('putComment');
         cy.get(".network-put").click()
         cy.wait("@putComment");
