@@ -13,6 +13,7 @@
     "runAllTests-webdriverUni": "npx cypress run --spec cypress/integration/webdriver-uni/*",
     "runAllTests-autostore": "npx cypress run --spec cypress/integration/automation-test-store/*",
     "runAllTests-autostore-dashboard": "npx cypress run --spec cypress/integration/automation-test-store/* --record --key 74e776c4-19a3-4f27-acde-fbc5fd74f155",
+    "runCucumberTests-webdriverUniversity": "npx cypress run --spec cypress/integration/webdriver-uni/features/*.feature --headed",
     "junit-merge": "npx junit-merge -d cypress/results/junit -o cypress/results/junit/results.xml",
     "delete-junit-report": "rm -rf cypress/results/junit/results.xml",
     "delete-all-results": "rm -rf cypress/results/* || true",
@@ -26,6 +27,7 @@
   "license": "ISC",
   "devDependencies": {
     "cypress": "^6.6.0",
+    "cypress-cucumber-preprocessor": "^4.0.1",
     "cypress-file-upload": "^5.0.7",
     "cypress-multi-reporters": "^1.5.0",
     "cypress-xpath": "^1.6.2",
@@ -34,5 +36,8 @@
     "mochawesome": "^6.2.2",
     "mochawesome-merge": "^4.2.0",
     "mochawesome-report-generator": "^5.2.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false
   }
 }
