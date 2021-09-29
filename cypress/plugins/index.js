@@ -55,3 +55,5 @@ module.exports = (on, config) => {
     pa11y: pa11y(), // calling the function is important
   });
 };
+
+require('@applitools/eyes-cypress')(module);

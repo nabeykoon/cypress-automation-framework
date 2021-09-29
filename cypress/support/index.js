@@ -13,6 +13,9 @@
 // https://on.cypress.io/configuration
 // ***********************************************************
 
+import '@applitools/eyes-cypress/commands'
+
+
 //Adds XPath command to Cypress.io test runner
 require('cypress-xpath')
 

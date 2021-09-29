@@ -26,6 +26,7 @@
   "author": "Nadeera.Abeykoon",
   "license": "ISC",
   "devDependencies": {
+    "@applitools/eyes-cypress": "^3.22.4",
     "cypress": "^6.6.0",
     "cypress-audit": "^1.0.0",
     "cypress-cucumber-preprocessor": "^4.0.1",
