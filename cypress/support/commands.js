@@ -58,3 +58,6 @@ Cypress.Commands.add("webdriverUni_ContactForm_Submission", (firstName, lastName
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
 import 'cypress-file-upload';
+
+//To run lighthouse using audit
+import 'cypress-audit/commands';
